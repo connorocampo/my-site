@@ -1,4 +1,6 @@
-.cmp-cta {
+.cmp-project {
+  background-color: #222;
+  color: #fff;
 
   &__wrapper {
     margin: auto;
@@ -13,8 +15,6 @@
   &__title {
     display: inline-block;
     font-size: 2rem;
-    background-color: #222;
-    color: #fff; 
     padding: 0.25rem 0.75rem;
     border-radius: 0.125rem;
     margin-bottom: 0.75rem;
@@ -22,56 +22,43 @@
 
   &__description {
     display: inline;
-    border-bottom: 1px solid #222;
     padding-bottom: 0.25rem;
-    margin-bottom: 0.5rem;
     vertical-align: text-top;
   }
 
   &__link {
+    color: #fff;
     text-decoration: none; 
-    color: $c-gray-2;
-  }
-
-  &__item {
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
+    text-transform: lowercase;
+    display: block;
     position: relative;
-    box-shadow: 0 10px 18px -4px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 20rem;
+    padding: 0.5rem;
 
     &::after {
-      content: "";
-      position: absolute;
+      content: '▶';
       display: block;
-      width: 100%;
-      height: 100%;
+      position: absolute;
       top: 0;
-      left: 0;
-      z-index: -1;
-      background-size: 400% 400%;
-      background-position: 0% 50%;
-      transform-origin: 0% 100%;
-      transform: scale(0, 1);
-      background-image: linear-gradient(to left, $c-green 0%, #81baff, $c-pink 100%);
-      transition: transform 400ms cubic-bezier(0.71, 0.55, 0.62, 1.57);
+      right: 0;
+      width: 0.75rem; 
+      height: 0.75rem;
+      color: white; 
     }
 
-    &:hover::after {
-      transform: scale(1, 1);
-      animation: gradientMove 4s ease-in infinite;
+    h2 {
+      font-size: 1rem;
+      display: inline-block;
     }
   }
 
-  &__content {
-    width: 100vw;
-    padding: 4rem 2rem;
-
-    @media (min-width: $bp-sm) {
-      max-width: 60vw;
-      padding: 4rem 0;
-    }
+  &__info {
+    display: none;
   }
+}
+
+.feather-folder {
+  display: inline-block;
 }
