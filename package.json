@@ -7,9 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "gatsby": "^2.15.28",
@@ -30,7 +28,6 @@
     "wait-on": "^3.3.0"
   },
   "devDependencies": {
-    "cypress": "^3.4.1",
     "prettier": "^1.18.2"
   },
   "repository": {
